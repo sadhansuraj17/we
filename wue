@@ -10,78 +10,77 @@ index.html
 </head>
 <body>
 
-    <!-- HEADER -->
-    <div class="header">Talk Rat Talk</div>
-    <div class="tagline">Chatting through life one nibble at a time</div>
+<header class="site-header">
+    <h1>Talk Rat Talk</h1>
+    <p class="tagline">Chatting through life one nibble at a time</p>
+</header>
 
-    <!-- NAVIGATION -->
-    <div class="nav">
-        <button>Rattus Adventures</button>
-        <button>Nibbles and Leafs</button>
-        <button>Tail End Stories</button>
-        <button>Cat Napped</button>
-    </div>
+<nav class="nav-bar">
+    <ul>
+        <li><button>Rattus Adventures</button></li>
+        <li><button>Nibbles and Leafs</button></li>
+        <li><button>Tail End Stories</button></li>
+        <li><button>Cat Napped</button></li>
+    </ul>
+</nav>
 
-    <!-- JOKE BOX -->
-    <div class="side-box">
-        <img src="https://i.imgur.com/XJxKz5Q.jpeg">
-        <h3>Joke of the Day</h3>
-        <p><b>Why did the rat sit on the clock?</b><br><br>
+<aside class="joke-box">
+    <img src="https://i.imgur.com/XJxKz5Q.jpeg" alt="Rat image">
+    <h3>Joke of the Day</h3>
+    <p><strong>Why did the rat sit on the clock?</strong><br><br>
         Because he wanted to be on time!</p>
-    </div>
+</aside>
 
-    <!-- CONTENT CARDS -->
-    <div class="grid">
+<main class="content-area">
 
-        <div class="card">
-            <img src="https://i.imgur.com/RwZ7Z6M.jpeg">
-            <h2>Rattus Adventures</h2>
-            <ul>
-                <li>Fun rat discoveries and great hideouts</li>
-                <li>Exploring tunnels and cardboard rolls</li>
-                <li>Daily antics and naughty moments</li>
-            </ul>
-        </div>
+    <section class="card">
+        <img src="https://i.imgur.com/RwZ7Z6M.jpeg" alt="Rat">
+        <h2>Rattus Adventures</h2>
+        <ul>
+            <li>Fun rat discoveries</li>
+            <li>Exploring tunnels</li>
+            <li>Daily antics</li>
+        </ul>
+    </section>
 
-        <div class="card">
-            <img src="https://i.imgur.com/w6oL1L8.jpeg">
-            <h2>Nibbles and Leafs</h2>
-            <ul>
-                <li>Creative snacks for the chewing rat</li>
-                <li>Gourmet treats and healthy picks</li>
-                <li>Unexpected food reviews</li>
-            </ul>
-        </div>
+    <section class="card">
+        <img src="https://i.imgur.com/w6oL1L8.jpeg" alt="Food">
+        <h2>Nibbles and Leafs</h2>
+        <ul>
+            <li>Creative snacks</li>
+            <li>Healthy treats</li>
+            <li>Surprising reviews</li>
+        </ul>
+    </section>
 
-        <div class="card">
-            <img src="https://i.imgur.com/h2c7tNC.jpeg">
-            <h2>Tail End Stories</h2>
-            <ul>
-                <li>Funny rat tales</li>
-                <li>Sleepy snuggle stories</li>
-                <li>Surprising adventures</li>
-            </ul>
-        </div>
+    <section class="card">
+        <img src="https://i.imgur.com/h2c7tNC.jpeg" alt="Rat sleeping">
+        <h2>Tail End Stories</h2>
+        <ul>
+            <li>Funny tales</li>
+            <li>Snuggle stories</li>
+            <li>Unexpected adventures</li>
+        </ul>
+    </section>
 
-        <div class="card">
-            <img src="https://i.imgur.com/OvrPwmV.jpeg">
-            <h2>Cat Napped</h2>
-            <ul>
-                <li>Little cat–rat encounters</li>
-                <li>Gentle paws, silly naps</li>
-                <li>Unexpected friendships</li>
-            </ul>
-        </div>
+    <section class="card">
+        <img src="https://i.imgur.com/OvrPwmV.jpeg" alt="Cat & Rat">
+        <h2>Cat Napped</h2>
+        <ul>
+            <li>Cat–rat encounters</li>
+            <li>Silly naps</li>
+            <li>Friendships</li>
+        </ul>
+    </section>
 
-    </div>
+</main>
 
-    <!-- FOOTER -->
-    <footer>
-        <a href="#">Subscribe</a>
-        <a href="#">Contact Us</a>
-    </footer>
+<footer class="site-footer">
+    <a href="#">Subscribe</a>
+    <a href="#">Contact Us</a>
+</footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 
@@ -89,108 +88,103 @@ index.html
 
 style.css
 
-body{
-    margin:0;
-    font-family: Arial;
-    background:#e0dd72;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e0dd72;
 }
 
 /* HEADER */
-.header{
-    text-align:center;
-    padding:20px 0 5px;
-    font-size:40px;
-    font-weight:bold;
+.site-header {
+    text-align: center;
+    padding: 20px 0;
 }
 
-.tagline{
-    text-align:center;
-    margin-bottom:20px;
-    font-style:italic;
+.tagline {
+    font-style: italic;
 }
 
-/* NAVIGATION */
-.nav{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    margin-bottom:25px;
+/* NAV */
+.nav-bar ul {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+    list-style: none;
 }
 
-.nav button{
-    background:#222;
-    color:white;
-    padding:10px 20px;
-    border:none;
-    border-radius:20px;
-    cursor:pointer;
+.nav-bar button {
+    background: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.nav button:hover{
-    background:#444;
+.nav-bar button:hover {
+    background: #444;
 }
 
-/* LEFT JOKE BOX */
-.side-box{
-    width:230px;
-    background:white;
-    padding:15px;
-    border-radius:15px;
-    position:absolute;
-    left:40px;
-    top:200px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+/* JOKE BOX */
+.joke-box {
+    width: 230px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    position: absolute;
+    left: 40px;
+    top: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.side-box img{
-    width:100%;
-    border-radius:15px;
+.joke-box img {
+    width: 100%;
+    border-radius: 15px;
 }
 
-/* MAIN GRID */
-.grid{
-    width:80%;
-    margin:auto;
-    margin-left:330px;
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:25px;
+/* MAIN CONTENT GRID */
+.content-area {
+    width: 75%;
+    margin-left: 320px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-.card{
-    background:white;
-    border-radius:15px;
-    padding:20px;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.card img{
-    width:120px;
-    display:block;
-    margin:auto;
-    border-radius:50%;
+.card img {
+    width: 120px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
 }
 
-.card h2{
-    text-align:center;
+/* FOOTER */
+.site-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px 0;
 }
 
-footer{
-    margin-top:50px;
-    text-align:center;
-    padding:20px;
-}
-
-footer a{
-    margin:0 15px;
+.site-footer a {
+    margin: 0 15px;
 }
 
 
 
 script.js
 
-document.querySelectorAll(".nav button").forEach((btn) => {
-    btn.addEventListener("click", () => {
-        alert("You clicked: " + btn.innerText);
+document.querySelectorAll(".nav-bar button").forEach(button => {
+    button.addEventListener("click", () => {
+        console.log("Clicked:", button.innerText);
+        alert("You clicked: " + button.innerText);
     });
 });
