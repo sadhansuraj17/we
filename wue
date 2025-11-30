@@ -1,0 +1,196 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk Rat Talk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">Talk Rat Talk</div>
+    <div class="tagline">Chatting through life one nibble at a time</div>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <button>Rattus Adventures</button>
+        <button>Nibbles and Leafs</button>
+        <button>Tail End Stories</button>
+        <button>Cat Napped</button>
+    </div>
+
+    <!-- JOKE BOX -->
+    <div class="side-box">
+        <img src="https://i.imgur.com/XJxKz5Q.jpeg">
+        <h3>Joke of the Day</h3>
+        <p><b>Why did the rat sit on the clock?</b><br><br>
+        Because he wanted to be on time!</p>
+    </div>
+
+    <!-- CONTENT CARDS -->
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://i.imgur.com/RwZ7Z6M.jpeg">
+            <h2>Rattus Adventures</h2>
+            <ul>
+                <li>Fun rat discoveries and great hideouts</li>
+                <li>Exploring tunnels and cardboard rolls</li>
+                <li>Daily antics and naughty moments</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/w6oL1L8.jpeg">
+            <h2>Nibbles and Leafs</h2>
+            <ul>
+                <li>Creative snacks for the chewing rat</li>
+                <li>Gourmet treats and healthy picks</li>
+                <li>Unexpected food reviews</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/h2c7tNC.jpeg">
+            <h2>Tail End Stories</h2>
+            <ul>
+                <li>Funny rat tales</li>
+                <li>Sleepy snuggle stories</li>
+                <li>Surprising adventures</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <img src="https://i.imgur.com/OvrPwmV.jpeg">
+            <h2>Cat Napped</h2>
+            <ul>
+                <li>Little cat–rat encounters</li>
+                <li>Gentle paws, silly naps</li>
+                <li>Unexpected friendships</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#">Subscribe</a>
+        <a href="#">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+style.css
+
+body{
+    margin:0;
+    font-family: Arial;
+    background:#e0dd72;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:20px 0 5px;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.tagline{
+    text-align:center;
+    margin-bottom:20px;
+    font-style:italic;
+}
+
+/* NAVIGATION */
+.nav{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.nav button{
+    background:#222;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.nav button:hover{
+    background:#444;
+}
+
+/* LEFT JOKE BOX */
+.side-box{
+    width:230px;
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    position:absolute;
+    left:40px;
+    top:200px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.side-box img{
+    width:100%;
+    border-radius:15px;
+}
+
+/* MAIN GRID */
+.grid{
+    width:80%;
+    margin:auto;
+    margin-left:330px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:120px;
+    display:block;
+    margin:auto;
+    border-radius:50%;
+}
+
+.card h2{
+    text-align:center;
+}
+
+footer{
+    margin-top:50px;
+    text-align:center;
+    padding:20px;
+}
+
+footer a{
+    margin:0 15px;
+}
+
+
+
+script.js
+
+document.querySelectorAll(".nav button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        alert("You clicked: " + btn.innerText);
+    });
+});
